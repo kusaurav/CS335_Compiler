@@ -1,4 +1,10 @@
-# Compiler_29
+# Compiler 
+## SIT Pair
+Source Language: **C++** 
+
+Implementation Language: **C**
+
+Target Language: **MIPS**
 
 ## Lexical Analysis
 ```
