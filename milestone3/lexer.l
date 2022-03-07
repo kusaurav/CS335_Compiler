@@ -8,6 +8,7 @@
 	
 		
     extern int iVal;
+    extern float fVal;
 	extern char* sVal;
 %}
 
@@ -108,6 +109,7 @@ RIGHT_SHIFT_EQ	">>="
 OCT_CONSTANT   ("0O"|"0o")[0-7]+
 HEX_CONSTANT   ("0X"|"0x")[a-fA-F0-9]+
 CONSTANT        [0-9]+
+FLOAT_CONSTANT  (([0-9]+)?"."[0-9]+)(("e"|"E")("+"|"-")[0-9]+)?|([0-9]+)("e"|"E")("+"|"-")[0-9]+|([0-9]+)("e"|"E")[0-9]+				
 IDENTIFIER      [_a-zA-Z][_a-zA-Z0-9]*
 STRING          [a-zA-Z]?\"(\\.|[^\\"])*\"
 IGNORE          ("#")(.)*(\n)
@@ -160,6 +162,7 @@ NEWLINE			\n
 {OCT_CONSTANT}  { yylval.iVal = atoi(yytext); return OCT_CONSTANT; }
 {HEX_CONSTANT}  { yylval.iVal = atoi(yytext); return HEX_CONSTANT; }
 {CONSTANT}  { yylval.iVal = atoi(yytext); return CONSTANT; }
+{FLOAT_CONSTANT} { yylval.fVal = atof(yytext); return FLOAT_CONSTANT ;}
 {STRING}  { yylval.sVal = strdup(yytext); return STRING; } 
 {RBRACE} { return *yytext; }
 {LBRACE} { return *yytext; }
