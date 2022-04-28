@@ -119,7 +119,7 @@ int column=1;
 [0-9]+										return CONSTANT;
 
 (([0-9]+)?"."[0-9]+)(("e"|"E")("+"|"-")[0-9]+)?		return FLOAT;
-([0-9]+)("e"|"E")("+"|"-")[0-9]+					return FLOAT;
+([0-9]+)("e"|"E")("+"|"-"|"")[0-9]+					return FLOAT;
 
 "true"|"false"							return BOOL;
 ("cout")[ ]*("<<")							return InOut;
@@ -127,7 +127,7 @@ int column=1;
 
 
 
-
+'[a-zA-Z]'                                 return CHARACTER;
 [_a-zA-Z][_a-zA-Z0-9]*					return IDENTIFIER;
 
 [a-zA-Z]?\"(\\.|[^\\"])*\"					return STRING;
