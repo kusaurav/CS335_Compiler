@@ -13,3 +13,4 @@
 #define BOOL 13
 #define STRING 14
 #define InOut 15
+#define CHARACTER 16
