@@ -18,6 +18,7 @@
 
 AUTO            "auto"
 BREAK			"break"
+BOOL                  "bool"
 CASE			"case"
 
 CHAR			"char"
@@ -121,6 +122,7 @@ NEWLINE			\n
 
 {AUTO} { return AUTO;}
 {BREAK} { return BREAK; }
+{BOOL} {return BOOL;}
 {CASE} { return CASE; }
 {CHAR} { return CHAR; }
 {CLASS} { return CLASS; }
