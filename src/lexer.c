@@ -12,7 +12,7 @@ extern FILE *yyin;
 
 
 char *token_name[]={"BRACKET","IDENTIFIER","KEYWORD","MATH_OP","COMPARATOR","LOGICAL_OP",
-"BITWISE_OP","PUNCTUATOR","ASSIGN_OP","ASSIGN_BIT","CONSTANT","FLOAT","BOOL","STRING","I/O"};
+"BITWISE_OP","PUNCTUATOR","ASSIGN_OP","ASSIGN_BIT","CONSTANT","FLOAT","BOOL","STRING","I/O", "CHARACTER"};
 
 int main(int argc,char **argv){
 	int tokenid;
